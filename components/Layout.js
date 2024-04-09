@@ -3,6 +3,8 @@ import Nav from "./Nav";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import Logo from "./Logo";
+import mainLogo from "../pages/assets/google.png";
+import Image from "next/image";
 
 export default function Layout({ children }) {
   const [showNav, setShowNav] = useState(false);
@@ -17,14 +19,22 @@ export default function Layout({ children }) {
   if (!session) {
     return (
       <div className="flex items-center bg-bgGray w-screen h-screen">
-        <div className="text-center w-full">
-          <button
-            onClick={handleGoogleLogin}
-            className="bg-white p-2 px-4 rounded-lg"
-          >
-            <img src={""} />
-            Login with google
-          </button>
+        <div className="flex text-center w-full justify-center">
+          <div className="flex text-center justify-center bg-white shadow-md p-2 py-3 w-60 rounded-md">
+            <Image
+              src={mainLogo}
+              width={34}
+              height={34}
+              alt="logo"
+              className="h-full"
+            />
+            <button
+              onClick={handleGoogleLogin}
+              className="rounded-lg whitespace-nowrap p-1 text-gray-500"
+            >
+              Login with google
+            </button>
+          </div>
         </div>
       </div>
     );

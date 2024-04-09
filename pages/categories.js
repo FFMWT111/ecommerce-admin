@@ -219,7 +219,7 @@ function Categories({ swal }) {
                       onClick={() => deleteCategory(category)}
                       className="btn-red"
                     >
-                      Delte
+                      Delete
                     </button>
                   </td>
                 </tr>

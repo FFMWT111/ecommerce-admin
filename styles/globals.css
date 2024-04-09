@@ -38,8 +38,12 @@ table.basic thead tr th
   @apply text-sm text-gray-600 uppercase border-b border-gray-200 px-4 py-2
 }
 
+table.basic tbody {
+  @apply py-4 
+}
+
 table.basic td {
-  @apply bg-white hover:bg-gray-100/70 
+  @apply bg-gray-50 hover:bg-gray-100/70 
 }
 
 table.basic tr td {
@@ -51,11 +55,11 @@ table.basic a {
 }
 
 .btn-red , .btn-default{
-    @apply   rounded-md p-1 px-4 shadow-md
+    @apply   rounded-md p-1 px-4 shadow-md bg-slate-100
 }
 
 .btn-red{
-  @apply bg-red-200 text-red-600 px-4 py-1 rounded-sm shadow-md
+  @apply bg-red-200 text-red-600 px-4 py-1 rounded-sm shadow-lg
 }
 
 .btn-default{

@@ -9,7 +9,6 @@ export default function Products() {
   useEffect(() => {
     axios.get("/api/products").then((res) => {
       setProducts(res.data);
-      console.log(res.data);
     });
   }, []);
 
@@ -27,7 +26,7 @@ export default function Products() {
         </thead>
         <tbody>
           {products.map((item) => (
-            <tr key={products._id}>
+            <tr key={item._id}>
               <td>{item.title}</td>
               <td className="text-right">
                 <Link
